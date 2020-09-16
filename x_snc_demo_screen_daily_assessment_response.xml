@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Daily Assessment Response" max_length="40" name="x_snc_demo_screen_daily_assessment_response" sizeclass="23" type="collection">
+        <element label="Answer" max_length="40" name="answer" type="string"/>
+        <element label="Parent" max_length="32" name="parent" reference="x_snc_demo_screen_daily_assessment" type="reference"/>
+        <element label="Question number" max_length="40" name="question_number" type="integer"/>
+        <index name="index">
+            <element name="parent"/>
+        </index>
+    </element>
+</database>

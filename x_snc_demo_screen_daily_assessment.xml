@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Daily Assessment" max_length="40" name="x_snc_demo_screen_daily_assessment" sizeclass="12" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="start" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Start" sequence="10" value="start"/>
+                <element inactive_on_update="false" label="In Progress" sequence="20" value="in_progress"/>
+                <element inactive_on_update="false" label="Complete - Pass" sequence="30" value="complete_pass"/>
+                <element inactive_on_update="false" label="Complete - Fail" sequence="40" value="complete_fail"/>
+                <element inactive_on_update="false" label="Incomplete" sequence="50" value="incomplete"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="user"/>
+        </index>
+    </element>
+</database>
